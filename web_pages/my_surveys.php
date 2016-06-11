@@ -20,17 +20,17 @@ and open the template in the editor.
         ?>
         <div class="container">
             <div class="panel panel-default">
-                <div class="panel-heading panel-info">Panel Heading</div>
-                <div class="panel-body">Panel Content</div>
-                This is the panel to view all the surveys that you created/manage.
-                Only the title will be shown, clicking the title shows the whole survey with questions and choices
-                <ul>
-                    <li><a href="entire_survey.php">Survey about Jimmy Cricket</a></li>
-                </ul>
+                <div class="panel-heading panel-info">My Surveys</div>
+                <div class="panel-body">This is the panel to view all the surveys that you created/manage.
+                    Only the title will be shown, clicking the title shows the whole survey with questions and choices
+                    <ul>
+                        <li><a href="entire_survey.php">Survey about Jimmy Cricket</a></li>
+                    </ul>
+                </div>
             </div>
             <div class="panel panel-default">
                 <div class="panel-heading panel-info">Submitted Responses</div>
-                <div class="panel-body">Panel Content</div>
+                <div class="panel-body">Panel Content</div>This is to review the submitted responses.
                 <ul>
                     <li><a href="survey_stats.php">Survey about Sam Sung</a></li>
                     <li><a href="survey_stats.php">Survey about Mike Roe Soft</a></li>

@@ -25,7 +25,7 @@ and open the template in the editor.
                     <ul>
                         <li><a href="create_survey.php">Create a survey</a></li>
                         <li><a href="send_surveys.php">Send a survey</a></li>
-                        <li>View submitted responses</li>
+                        <li><a href="my_surveys.php">View submitted responses</a></li>
                     </ul>
                 </div>
             </div>
