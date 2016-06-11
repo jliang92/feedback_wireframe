@@ -23,7 +23,7 @@ and open the template in the editor.
                 <div class="panel-heading panel-info">What do you want to do today?</div>
                 <div class="panel-body">
                     <ul>
-                        <li>Create a survey</li>
+                        <li><a href="create_survey.php">Create a survey</a></li>
                         <li>Edit a survey</li>
                         <li>Review survey</li>
                     </ul>

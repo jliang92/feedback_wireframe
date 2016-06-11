@@ -22,6 +22,7 @@ and open the template in the editor.
             <div class="panel panel-default">
                 <div class="panel-heading panel-info">Panel Heading</div>
                 <div class="panel-body">Panel Content</div>
+                This is the page to view all the surveys that you created/manage.
             </div>
         </div>
 

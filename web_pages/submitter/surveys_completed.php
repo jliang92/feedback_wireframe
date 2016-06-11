@@ -27,7 +27,7 @@ and open the template in the editor.
                 <div class="panel-heading panel-info">Which completed survey do you want to review?</div>
                 <div class="panel-body">
                     <ul>
-                        <li></li>
+                        <li> <a href="completed_survey.php"> Study regarding 6 ft tall men and their preference in foods.</a></li>
                     </ul>
                 </div>
             </div>

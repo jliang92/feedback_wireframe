@@ -28,9 +28,15 @@ and open the template in the editor.
                 <div class="panel-body">
                     <ul>
                         <li>Complete a survey</li>
-                        <li>Browse new surveys</li>
                         <li>Review your completed surveys</li>
                     </ul>
+                </div>
+            </div>
+            
+            <div class="panel panel-default">
+                <div class="panel-heading panel-info">Survey Requests received:</div>
+                <div class="panel-body">
+                    
                 </div>
             </div>
         </div>
