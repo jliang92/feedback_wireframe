@@ -34,9 +34,8 @@ and open the template in the editor.
                 <div class="panel-heading panel-info">Submitter</div>
                 <div class="panel-body">
                     <ul>
-                        <li><a href="new_surveys.php">Take a survey</a></li>
-                        <li><a href="new_surveys.php">Browse surveys</a></li>
-                        <li><a href="my_completed_surveys.php">View my completed surveys</a></li>
+                        <li><a href="my_surveys.php">Take a survey</a></li>
+                       <li><a href="my_surveys.php">View my completed surveys</a></li>
                     </ul>
                 </div>
             </div>

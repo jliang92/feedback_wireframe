@@ -19,7 +19,10 @@ and open the template in the editor.
         include '../web_components/bootstrap_navbar_logged_in.html';
         ?>
         <div class="container">
-
+            <div class="panel panel-default">
+                <div class="panel-heading panel-info"><h2 class="text-center">Survey Title: Survey about Daniel Craig</h2></div>
+                
+            </div>
 
             <form class="form-horizontal" role="form">
 
@@ -180,7 +183,7 @@ and open the template in the editor.
                     <div class="col-md-6"><button type="button" class=" btn  btn-primary">Submit</button></div>                    
                     <div class="col-md-6"><button type="button" class=" btn btn-primary">Submit as Anonymous</button></div>
                 </div>
-                
+
             </form>
         </div>
 

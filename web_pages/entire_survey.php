@@ -7,7 +7,7 @@ and open the template in the editor.
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Taking Survey</title>
+        <title>View Survey</title>
         <link href="../libs/css/bootstrap/css/bootstrap.css" rel="stylesheet" media="screen" />
         <script src="../libs/js/jQuery/jquery-1.12.4.min.js"></script>
         <script src="../libs/css/bootstrap/js/bootstrap.min.js"></script>
