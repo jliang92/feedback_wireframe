@@ -46,7 +46,7 @@ and open the template in the editor.
                 <div class="panel-heading panel-info">Responses Received</div>
                 <div class="panel-body">
                     <ul>
-                        <li><a href="responses_received_list.php">Survey about Sam Sung</a></li>
+                        <li><a href="responses_received_list.php">Survey about Sam Wilson</a></li>
 
 
                     </ul></div>

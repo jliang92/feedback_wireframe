@@ -7,7 +7,7 @@ and open the template in the editor.
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Survey about Sam Sung</title>
+        <title>Survey about Sam Wilson</title>
         <link href="../libs/css/bootstrap/css/bootstrap.css" rel="stylesheet" media="screen" />
         <script src="../libs/js/jQuery/jquery-1.12.4.min.js"></script>
         <script src="../libs/css/bootstrap/js/bootstrap.min.js"></script>
@@ -25,7 +25,7 @@ and open the template in the editor.
         ?>
         <div class="container">
             <div class="panel panel-default">
-                <div class="panel-heading panel-info"><h2 class="text-center">Data Source: Survey About Sam Sung</h2></div>
+                <div class="panel-heading panel-info"><h2 class="text-center">Data Source: Survey About Sam Wilson</h2></div>
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-md-8"></div>

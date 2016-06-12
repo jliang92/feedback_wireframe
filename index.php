@@ -19,7 +19,7 @@ and open the template in the editor.
         include 'web_components/bootstrap_navbar.html';
         ?>
         <div class="container">
-           <!-- Modal -->
+            <!-- Modal --> 
             <div class="modal fade" id="myModal" role="dialog">
                 <div class="modal-dialog">
                     <div class="modal-content">
@@ -27,45 +27,43 @@ and open the template in the editor.
                             <!-- <button type="button" class="close" data-dismiss="modal">&times;</button>-->
                             <h4 id="modal_title" class="modal-title">Log In</h4>
                         </div>
-                        <form class="form-horizontal" action="web_pages/home.php" role="form">
+                        <form class="form-horizontal" id="credentials_form" action="web_pages/home.php" role="form">
+
                             <div class="modal-body">
                                 <div class="form-group">
                                     <label class="control-label col-md-4" for="email">Email:</label>
                                     <div class="col-sm-6">
-                                        <input type="text" class="form-control" id="email" placeholder="Enter email" required>
+                                        <input type="text" class="form-control" id="email" placeholder="Enter email" required/>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label col-md-4" for="pwd">Password:</label>
                                     <div class="col-sm-6"> 
-                                        <input type="password" class="form-control" id="pwd" placeholder="Enter password" required>
+                                        <input type="password" class="form-control" id="pwd" placeholder="Enter password" required/>
                                     </div>
                                 </div>
                                 <div  id="confirm_password" class="form-group">
                                     <label class="control-label col-md-4" for="pwd">Confirm Password:</label>
                                     <div class="col-sm-6"> 
-                                        <input type="password" class="form-control" id="confirm_pwd" placeholder="Re-enter password" required>
+                                        <input type="password" class="form-control" id="confirm_pwd" placeholder="Re-enter password" disabled required/>
                                     </div>
                                 </div>
                             </div>
                             <div class="modal-footer">
-                                <div class="row">
-                                    <div class="col-md-3"></div>
-                                    <div class="col-md-3"><button id="login" type="submit" class="btn btn-default">Log In</button></div>
-                                    <div class="col-md-3">
-                                        <button id="display_signup" type="button" class="btn btn-default">Sign Up</button>
-                                        <button id="submit_signup" type="submit" class="btn btn-default">Done</button>
-                                    </div>
-                                </div>
-
-
+                                <button id="login_button" type="submit"  class="btn btn-default">Log In</button>
+                                <button id="display_signup" type="button" class="btn btn-default">Sign Up</button>
+                                <button id="submit_signup" type="submit" class="btn btn-default">Done</button>
 
                             </div>
+
                         </form>
+
+
+
+
                     </div>
                 </div>
-            </div>
-
+            </div><!--End of Modal-->
 
         </div>
         <script>
@@ -80,16 +78,27 @@ and open the template in the editor.
 
                 $("#display_signup").show();
                 $("#submit_signup").hide();
+
                 $("#confirm_password").hide();
+                $("#confirm_password").prop("disabled", true);
 
                 $("#display_signup").click(function () {
                     $("#display_signup").hide();
                     $("#submit_signup").show();
-                    $("#login").hide();
-                    $("#confirm_password").show();
-$("#modal_title").text("Sign Up");
+                    $("#login_button").hide();
 
+
+                    $("#confirm_password").show();
+                    $("#confirm_pwd").prop("disabled",false);
+
+                    $("#modal_title").text("Sign Up");
+
+                    $("#email").val("");
+                    $("#pwd").val("");
                 });
+
+
+
 
             });
         </script>

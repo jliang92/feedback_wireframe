@@ -40,16 +40,15 @@ and open the template in the editor.
                     <div class="panel-body">
 
                         <div id="participants_bank" class="multiselect">
-                            <label> <input type="checkbox" name="option[]" />Gerard Butler</label>
-                            <label> <input type="checkbox" name="option[]" />Jennifer Aniston</label>
-                            <label> <input type="checkbox" name="option[]" />Kevin James</label>
-                            <label> <input type="checkbox" name="option[]" />Steve Jobs</label>
-                            <label> <input type="checkbox" name="option[]" />Roger Federer</label>
-                            <label> <input type="checkbox" name="option[]" />Willow Smith</label>
-                            <label> <input type="checkbox" name="option[]" />Urkel</label>
-                            <label> <input type="checkbox" name="option[]" />Seth Green</label>
-                            <label> <input type="checkbox" name="option[]" />Venus Williams</label>
-                            <label> <input type="checkbox" name="option[]" />Queen Latifah</label>
+                            <label> <input type="checkbox" name="option[]" />Jeremy Smith</label>
+                            <label> <input type="checkbox" name="option[]" />Jennifer Fillion</label>
+                            <label> <input type="checkbox" name="option[]" />Nathan James</label>
+                            <label> <input type="checkbox" name="option[]" />Harold Jordan</label>
+                            <label> <input type="checkbox" name="option[]" />Andy Fesser</label>
+                            <label> <input type="checkbox" name="option[]" />Gina Sampson</label>
+                            <label> <input type="checkbox" name="option[]" />Seth Stein</label>
+                            <label> <input type="checkbox" name="option[]" />June Lee</label>
+                            <label> <input type="checkbox" name="option[]" />Yuna Park</label>
                             <label> <input type="checkbox" name="option[]" />Monica Gellar</label>
                             <label> <input type="checkbox" name="option[]" />Rachel Green</label>
 
@@ -64,7 +63,7 @@ and open the template in the editor.
 
                             <div class="col-md-8">  
                                 <select id="survey_bank" class="form-control" >
-                                    <option>Survey about Sam Sung</option>
+                                    <option>Survey about Sam Wilson</option>
                                   
                                 </select>
                             </div>

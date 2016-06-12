@@ -28,7 +28,7 @@ and open the template in the editor.
                         <label class="control-label">Survey Title:</label>
                     </div>
                     <div class="col-md-4">  
-                        <label class="control-label">Survey about Sam Sung</label>
+                        <label class="control-label">Survey about Sam Wilson</label>
 
                     </div>
                 </div>
