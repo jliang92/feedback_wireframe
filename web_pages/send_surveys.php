@@ -39,7 +39,7 @@ and open the template in the editor.
                     <div class="panel-heading panel-info">Select survey takers:</div>
                     <div class="panel-body">
 
-                        <div class="multiselect">
+                        <div id="participants_bank" class="multiselect">
                             <label> <input type="checkbox" name="option[]" />Gerard Butler</label>
                             <label> <input type="checkbox" name="option[]" />Jennifer Aniston</label>
                             <label> <input type="checkbox" name="option[]" />Kevin James</label>
@@ -63,14 +63,14 @@ and open the template in the editor.
                         <div class="row">
 
                             <div class="col-md-8">  
-                                <select class="form-control" >
+                                <select id="survey_bank" class="form-control" >
                                     <option>Survey about Sam Sung</option>
                                   
                                 </select>
                             </div>
 
                             <div class="col-md-4">
-                                <select class="form-control">
+                                <select id="timepoint_descriptions" class="form-control">
                                     <option> First Quarter 2016</option>
                                     <option> Second Quarter 2016</option>
                                     <option> Third Quarter 2016</option>

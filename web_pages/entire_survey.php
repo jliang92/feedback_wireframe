@@ -19,8 +19,9 @@ and open the template in the editor.
         include '../web_components/bootstrap_navbar_logged_in.html';
         ?>
         <div class="container">
-            <div class="panel panel-heading panel-default">
-                <h2 class="text-center"> Survey Title: Survey about Jimmy Cricket</h2>
+            <div class="panel panel-default">
+                <div class="panel-heading panel-info"><h2 class="text-center">Survey Title: Survey about Sam Sung</h2></div>
+                
             </div>
 
             <form class="form-horizontal" role="form">
@@ -179,6 +180,7 @@ and open the template in the editor.
                 </div>
                 
             </form>
+            <a href="responses_received_list.php"><button id="back" type="button" class="btn btn-block btn-primary">Back</button></a>
         </div>
 
     </body>

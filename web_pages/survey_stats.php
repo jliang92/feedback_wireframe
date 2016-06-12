@@ -25,25 +25,25 @@ and open the template in the editor.
 
                 <div class="row">
                     <div class="col-md-2"> 
-                        <label class="control-label" for="timepoints">Survey Title:</label>
+                        <label class="control-label">Survey Title:</label>
                     </div>
                     <div class="col-md-4">  
-                        <label class="control-label" for="timepoints">Survey about Sam Sung</label>
+                        <label class="control-label">Survey about Sam Sung</label>
 
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-2"> 
-                        <label class="control-label" for="timepoints">Number of participants for timepoint:</label>
+                        <label class="control-label">Number of participants for timepoint:</label>
                     </div>
                     <div class="col-md-4">  
-                        <label class="control-label" for="timepoints">100</label>
+                        <label class="control-label">100</label>
 
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-2"> 
-                        <label class="control-label" for="timepoints">Select a timepoint:</label>
+                        <label class="control-label">Select a timepoint:</label>
                     </div>
                     <div class="col-md-2">  
                         <select id="timepoints" class="form-control">
@@ -98,7 +98,7 @@ and open the template in the editor.
                 </div>
             </div>
             
-            <a href="responses_received_list.php"><button id="back" type="button" class="btn btn-block btn-primary">Back</button></a>
+            <a href="responses_received_list.php" class="btn btn-block btn-primary">Back</a>
         </div>
         <script type="text/javascript">
             $(document).ready(function () {

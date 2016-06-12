@@ -28,7 +28,11 @@ and open the template in the editor.
                 <div class="panel-heading panel-info"><h2 class="text-center">Data Source: Survey About Sam Sung</h2></div>
                 <div class="panel-body">
                     <div class="row">
-                        <a href="survey_stats.php"><span class="btn btn-primary pull-right">Stats</span></a>
+                        <div class="col-md-8"></div>
+                        <div class="col-md-2"> <a href="entire_survey.php"><span class="btn btn-primary btn-block">View Survey</span></a></div>
+                        <div class="col-md-2"> <a href="survey_stats.php"><span class="btn btn-primary btn-block">Stats</span></a></div>
+                       
+                        
                     </div>
                     <div class="scrollable">
                     <table class="table table-hover table-responsive">
@@ -45,7 +49,7 @@ and open the template in the editor.
                         <tr>
                             <td>3</td>
                             <td>Anonymous</td>
-                            <td>123as4567s</td>
+                            <td>0</td>
                             <td>6/12/2016</td>
                             <td>no</td>
                             <td>yes</td>
