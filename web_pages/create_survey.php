@@ -20,14 +20,14 @@ and open the template in the editor.
         ?>
         <div class="container">
             <div  class="panel panel-default">
-                <div class="panel-heading panel-info"><h2 class="text-center">Create a Survey</h2></div>
+                <div class="panel-heading panel-info"><h2 id="survey_title_header" class="text-center">Create a Survey</h2></div>
                 <div class="panel-body">
                     <div id="directions"></div>
                     Enter the survey's title and number of timepoints to begin.
                     <br><br>
                     <div class="row form-group">
                         <div class="col-md-7">
-                            <input type="text" class="form-control" placeholder="Enter title" required>
+                            <input type="text" id="survey_title" class="form-control" placeholder="Enter title" required>
                         </div>
                         <div class="col-md-3">
                             <input type="number"  class="form-control" placeholder="Enter number of timepoints" required>
@@ -39,31 +39,74 @@ and open the template in the editor.
                     </div>
 
 
-                    <form id="selection_" role="form">
-                        <div class="form-group">
-
-                            <label for="ddrp1">Select answer type:</label>
-                            <select id="ddrp1" class="form-control" >
-                                <option value="binary_1">True/False</option>
-                                <option value="binary_2">Yes/No</option>
-                                <option value="small_text_box">Small text box</option>
-                                <option value="large_text_box">Large text box</option>
-                                <option value="dropdown">Multiple choice(drop down)</option>
-                                <option value="radio_buttons">Multiple choice(radio buttons)</option>
-                                <option value="check_boxes">Check boxes(multiple selections)</option>
-                            </select>
-                        </div>
-                    </form>
-
                 </div>
             </div>
-            <div class="row">
+            <div class="row" id="question_creator">
                 <div class="col-md-6">
-                    Copy question and choices from bank below
+
+                    <div class="panel panel-default">
+                        <div class="panel-heading panel-info">
+                            Search for and Copy a question  from bank below
+                        </div>
+                        <div class="panel-body">
+
+
+                            <div id="custom-search-input">
+                            <div class="input-group">
+                                <input type="text" class="  search-query form-control" placeholder="Search" />
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" type="button">
+                                        <span class=" glyphicon glyphicon-search"></span>
+                                    </button>
+                                </span>
+                            </div>
+                        </div>
+                            <form id="copy_question" role="form">
+                                <div class="form-group">
+
+                                    <label for="questions">Select Question:</label>
+                                    <select id="questions" class="form-control" >
+                                        <option value="">None</option>
+                                        <option value="">Which fruit would you throw at me?</option>
+                                        <option value="">Do you enjoy working with me?</option>
+                                        <option value="">Is the following following statement correct: I'm very bad at managing my time.</option>
+                                    </select>
+                                </div>
+                            </form>
+
+
+                        </div>
+
+                    </div>
+
                 </div>
-                <h2>Or</h2>
                 <div class="col-md-6">
-                    Create your own question
+                    <div class="panel panel-default">
+                        <div class="panel-heading panel-info">
+                            Create your own question
+                        </div>
+                        <div class="panel-body">
+                            <form id="selection_" role="form">
+                                <div class="form-group">
+
+                                    <label for="ddrp1">Select field type:</label>
+                                    <select id="ddrp1" class="form-control" >
+                                        <option value="binary_1">True/False</option>
+                                        <option value="binary_2">Yes/No</option>
+                                        <option value="small_text_box">Small text box</option>
+                                        <option value="large_text_box">Large text box</option>
+                                        <option value="dropdown">Multiple choice(drop down)</option>
+                                        <option value="radio_buttons">Multiple choice(radio buttons)</option>
+                                        <option value="check_boxes">Check boxes(multiple selections)</option>
+                                    </select>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+
+
+
                 </div>
             </div>
 
@@ -126,7 +169,7 @@ and open the template in the editor.
                     <br><br>
 
                 </div>
-                
+
 
             </div>  
         </div>
@@ -139,7 +182,7 @@ and open the template in the editor.
                     $("#form_create_form").hide();
                     $("#save").hide();
                     $("#submit_button").hide();
-                    $("#selection_").hide();
+                      $("#question_creator").hide();
                 }
 
                 function get_text_input_field() {
@@ -201,7 +244,8 @@ and open the template in the editor.
                     }
                     hide_form();
                     $("#form_create_form").show();
-                    $("#selection_").show();
+                       $("#question_creator").show();
+                  
                     $("#save").show();
                     $("#submit_button").show(); //needs a counter of some sort to only show submit button if at least 1 question has been made
 
@@ -209,8 +253,15 @@ and open the template in the editor.
                 $("#start_create_survey").click(function () {
                     $("#start_create_survey").hide();
                     $("#directions").hide();
-                    $("#selection_").show();
+                    $("#question_creator").show();
+                    
+                    $("#survey_title_header").text($("#survey_title").val());
+                    
+                    
+                    
+                    
                 });
+                
                 $("#add_choice").click(function () {
                     $("#create_question").append(get_text_input_field());
                 });
@@ -223,7 +274,19 @@ and open the template in the editor.
                 $("#save_question").click(function () {
                     append_question();
                 });
+                
+                $("#questions").change(function(){
+                    $("#question").val($("#questions option:selected").text());
+                    hide_form();
+                     $("#form_create_form").show();
+                     $("#question_creator").show();
+                    $("#save").show();
+                    $("#submit_button").show(); //needs a counter of some sort to only show submit button if at least 1 question has been made
+
+                });
                 hide_form();
+                
+                
             });
         </script>
     </body>
