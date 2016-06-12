@@ -26,7 +26,11 @@ and open the template in the editor.
         <div class="container">
             <div class="panel panel-default">
                 <div class="panel-heading panel-info"><h2 class="text-center">Data Source: Survey About Sam Sung</h2></div>
-                <div class="panel-body scrollable">
+                <div class="panel-body">
+                    <div class="row">
+                        <a href="survey_stats.php"><span class="btn btn-primary pull-right">Stats</span></a>
+                    </div>
+                    <div class="scrollable">
                     <table class="table table-hover table-responsive">
                         <tr>
                             <th>Survey ID</th>
@@ -71,7 +75,7 @@ and open the template in the editor.
                             <td>cherry</td>
                         </tr>
 
-                    </table>
+                    </table></div>
                 </div>
             </div>
 

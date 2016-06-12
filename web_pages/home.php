@@ -7,7 +7,7 @@ and open the template in the editor.
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Welcome</title>
+        <title>Welcome Sam Sung</title>
         <link href="../libs/css/bootstrap/css/bootstrap.css" rel="stylesheet" media="screen" />
         <script src="../libs/js/jQuery/jquery-1.12.4.min.js"></script>
         <script src="../libs/css/bootstrap/js/bootstrap.min.js"></script>
@@ -19,6 +19,7 @@ and open the template in the editor.
         include '../web_components/bootstrap_navbar_logged_in.html';
         ?>
         <div class="container">
+            
             <div class="panel panel-default">
                 <div class="panel-heading panel-info">Recipient</div>
                 <div class="panel-body">

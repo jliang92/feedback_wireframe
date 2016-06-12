@@ -179,9 +179,12 @@ and open the template in the editor.
                     </div>
                 </div>
 
-                <div class="row center-align">
-                    <div class="col-md-6"><button type="button" class=" btn  btn-primary">Submit</button></div>                    
-                    <div class="col-md-6"><button type="button" class=" btn btn-primary">Submit as Anonymous</button></div>
+                <div class=" text-center">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-3"><button type="button" class=" btn btn-block btn-primary">Submit</button></div>                    
+                   
+                    <div class="col-md-3"><button type="button" class=" btn btn-block btn-primary">Submit as Anonymous</button></div>
+                   
                 </div>
 
             </form>

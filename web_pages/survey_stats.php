@@ -37,7 +37,7 @@ and open the template in the editor.
                         <label class="control-label" for="timepoints">Number of participants for timepoint:</label>
                     </div>
                     <div class="col-md-4">  
-                        <label class="control-label" for="timepoints">258</label>
+                        <label class="control-label" for="timepoints">100</label>
 
                     </div>
                 </div>
@@ -60,104 +60,168 @@ and open the template in the editor.
 
             <div class="panel panel-default">
                 <div class="panel-body">
-                    <div id="timepoint_content">
-                        <div id="c_container" style="height: 300px; width: 100%;"></div>
+                    <div>
+                        <div id="container_2" style="height: 300px; width: 100%;"></div>
+                        Whats up
+
                     </div>
+
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div >
+                        <div id="container_4" style="height: 300px; width: 100%;"></div>
+                        Whats up
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div >
+                        <div id="container_5" style="height: 300px; width: 100%;"></div>
+                        Whats up
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div >
+                        <div id="container_6" style="height: 300px; width: 100%;"></div>
+                        Whats up
+
+                    </div>
+
                 </div>
             </div>
         </div>
         <script type="text/javascript">
             $(document).ready(function () {
-
-                //Better to construct options first and then pass it as a parameter
-                var options = {
-                    title: {
-                        text: "Scores"
-                    },
-                    animationEnabled: true,
-                    data: [
-                        {
-                            type: "column", //change it to line, area, bar, pie, etc
-                            dataPoints: [
-                                {x: 1, y: 10},
-                                {x: 2, y: 11},
-                                {x: 3, y: 14},
-                                {x: 4, y: 16},
-                                {x: 5, y: 19},
-                                {x: 6, y: 15},
-                                {x: 7, y: 12},
-                                {x: 8, y: 10}
-                            ]
-                        }
-                    ]
-                };
-
-                $("#c_container").CanvasJSChart(options);
-                $("#timepoints").change(function () {
-                    //   var selectedVal = $(this).find(':selected').val();
+                function create_chart_2() {
+                    //Better to construct options first and then pass it as a parameter
                     var vals = [];
-                    for (i = 0; i < 8; i++) {
-                        var r_val = Math.floor((Math.random() * 20) + 10);
+                    for (i = 0; i < 2; i++) {
+                        var r_val = Math.floor((Math.random() * 50) + 10);
                         vals[i] = r_val;
                     }
-
-                    for (i = 0; i < 8; i++) {
-                        var r_val = Math.floor((Math.random() * 15) + 10);
-                        vals[i] += r_val;
-                    }
-
-
-
                     var options = {
                         title: {
-                            text: "Scores"
+                            text: "Question 2: Do you enjoy working with me?"
                         },
                         animationEnabled: true,
                         data: [
                             {
                                 type: "column", //change it to line, area, bar, pie, etc
                                 dataPoints: [
-                                    {label: "Saudi", y: vals[0]},
-                                    {label: "Santa Teresa", y: vals[1]},
-                                    {label: "thor",y: vals[2]},
-                                    {label: "a", y: vals[3]},
-                                    {label: "b", y: vals[4]},
-                                    {label: "c", y: vals[5]},
-                                    {label: "d", y: vals[7]},
-                                    {label: "e", y: vals[6]}
-                                ]
-                            },
-                            {
-                                type: "column", //change it to line, area, bar, pie, etc
-                                dataPoints: [
-                                    {label: "Saudi", y: vals[1]},
-                                    {label: "Santa Teresa", y: vals[3]},
-                                    {label: "thor",y: vals[4]},
-                                    {label: "a", y: vals[2]},
-                                    {label: "b", y: vals[5]},
-                                    {label: "c", y: vals[7]},
-                                    {label: "d", y: vals[6]},
-                                    {label: "e", y: vals[0]}
-                                ]
-                            },
-                            {
-                                type: "column", //change it to line, area, bar, pie, etc
-                                dataPoints: [
-                                    {label: "Saudi", y: vals[3]},
-                                    {label: "Santa Teresa", y: vals[6]},
-                                    {label: "thor",y: vals[7]},
-                                    {label: "a", y: vals[5]},
-                                    {label: "b", y: vals[4]},
-                                    {label: "c", y: vals[2]},
-                                    {label: "d", y: vals[0]},
-                                    {label: "e", y: vals[1]}
+                                    {label: "Yes", y: vals[0]},
+                                    {label: "No", y: vals[1]}
+
                                 ]
                             }
                         ]
                     };
-                    $("#c_container").CanvasJSChart(options);
 
+                    $("#container_2").CanvasJSChart(options);
+                }
+
+                function create_chart_4() {
+                    var vals = [];
+                    for (i = 0; i < 2; i++) {
+                        var r_val = Math.floor((Math.random() * 50) + 10);
+                        vals[i] = r_val;
+                    }
+                    //Better to construct options first and then pass it as a parameter
+                    var options = {
+                        title: {
+                            text: "Question 4: Did we ever fight?"
+                        },
+                        animationEnabled: true,
+                        data: [
+                            {
+                                type: "column", //change it to line, area, bar, pie, etc
+                                dataPoints: [
+                                    {label: "Yes", y: vals[0]},
+                                    {label: "No", y: vals[1]}
+                                ]
+                            }
+                        ]
+                    };
+
+                    $("#container_4").CanvasJSChart(options);
+                }
+
+                function create_chart_5() {
+                    var vals = [];
+                    for (i = 0; i < 2; i++) {
+                        var r_val = Math.floor((Math.random() * 50) + 10);
+                        vals[i] = r_val;
+                    }
+                    //Better to construct options first and then pass it as a parameter
+                    var options = {
+                        title: {
+                            text: "Question 5: Is the following following statement correct: I'm very bad at managing my time."
+                        },
+                        animationEnabled: true,
+                        data: [
+                            {
+                                type: "column", //change it to line, area, bar, pie, etc
+                                dataPoints: [
+                                    {label: "True", y: vals[0]},
+                                    {label: "False", y: vals[1]}
+                                ]
+                            }
+                        ]
+                    };
+
+                    $("#container_5").CanvasJSChart(options);
+                }
+
+                function create_chart_6() {
+                    var vals = [];
+                    for (i = 0; i < 6; i++) {
+                        var r_val = Math.floor((Math.random() * 50) + 10);
+                        vals[i] = r_val;
+                    }
+                    //Better to construct options first and then pass it as a parameter
+                    var options = {
+                        title: {
+                            text: "Question 6: Which fruit would you throw at me?"
+                        },
+                        animationEnabled: true,
+                        data: [
+                            {
+                                type: "column", //change it to line, area, bar, pie, etc
+                                dataPoints: [
+                                    {label: "Pineapple", y: vals[0]},
+                                    {label: "Orange", y: vals[1]},
+                                    {label: "Strawberry", y: vals[2]},
+                                    {label: "Cherry", y: vals[3]},
+                                    {label: "Honey Dew", y: vals[4]},
+                                    {label: "Watermelon", y: vals[5]}
+
+                                ]
+                            }
+                        ]
+                    };
+
+                    $("#container_6").CanvasJSChart(options);
+                }
+
+                $("#timepoints").change(function () {
+                    render_charts();
                 });
+                
+                function render_charts() {
+                    create_chart_2();
+                    create_chart_4();
+                    create_chart_5();
+                    create_chart_6();
+                }
+                render_charts();
             });
         </script>
     </body>
