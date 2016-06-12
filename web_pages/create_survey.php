@@ -19,6 +19,7 @@ and open the template in the editor.
         include '../web_components/bootstrap_navbar_logged_in.html';
         ?>
         <div class="container">
+
             <div  class="panel panel-default">
                 <div class="panel-heading panel-info"><h2 id="survey_title_header" class="text-center">Create a Survey</h2></div>
                 <div class="panel-body">
@@ -30,10 +31,12 @@ and open the template in the editor.
                             <input type="text" id="survey_title" class="form-control" placeholder="Enter title" required>
                         </div>
                         <div class="col-md-3">
-                            <input type="number" min="1" class="form-control" placeholder="Enter number of timepoints" required>
+                            <input id="timepoint_value" type="number" min="1" class="form-control" placeholder="Enter number of timepoints" required>
                         </div>
                         <div class="col-md-2">
                             <button id="start_create_survey" class="btn btn-block btn-primary" data-placement="bottom" title="Click to start making the survey">Create Survey</button>
+                            <button id="time_points_modal" class="btn btn-block btn-primary" data-toggle="modal" data-target="#myModal">Time point(s)</button>
+
                         </div>
 
                     </div>
@@ -41,6 +44,29 @@ and open the template in the editor.
 
                 </div>
             </div>
+
+
+
+            <div class="modal fade" id="myModal" role="dialog"><!--Modal Start-->
+                <div class="modal-dialog">
+                    <div class="modal-content">
+
+                        <!-- <button type="button" class="close" data-dismiss="modal">&times;</button>-->
+                        <div class="modal-header"><h4 class="modal-title">Time point Descriptions</h4></div>
+
+                        <div id="timepoint_descriptions_content">
+
+                        </div>
+
+                        <div class="modal-footer">
+                            <button id="timepoint_descriptions_finished" data-dismiss="modal" type="button" class="btn btn-default">Continue</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div><!--Modal end-->
+
+
             <div class="row" id="question_creator">
                 <div class="col-md-6">
 
@@ -52,15 +78,15 @@ and open the template in the editor.
 
 
                             <div id="custom-search-input">
-                            <div class="input-group">
-                                <input type="text" class="  search-query form-control" placeholder="Search" />
-                                <span class="input-group-btn">
-                                    <button class="btn btn-default" type="button">
-                                        <span class=" glyphicon glyphicon-search"></span>
-                                    </button>
-                                </span>
+                                <div class="input-group">
+                                    <input type="text" class="  search-query form-control" placeholder="Search" />
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default" type="button">
+                                            <span class=" glyphicon glyphicon-search"></span>
+                                        </button>
+                                    </span>
+                                </div>
                             </div>
-                        </div>
                             <form id="copy_question" role="form">
                                 <div class="form-group">
 
@@ -176,13 +202,11 @@ and open the template in the editor.
         <script>
 
             $(document).ready(function () {
-                var question_count = 1;
-                var choice_count = 1;
                 function hide_form() {
                     $("#form_create_form").hide();
                     $("#save").hide();
                     $("#submit_button").hide();
-                      $("#question_creator").hide();
+                    $("#question_creator").hide();
                 }
 
                 function get_text_input_field() {
@@ -196,6 +220,14 @@ and open the template in the editor.
                             "<span class=\"glyphicon glyphicon-remove\">" +
                             "</span></button></div></div>";
                 }
+
+                function get_description_input_field(i) {
+                    return "<div name=\"choice_wrapper[]\"class=\"form-group\">" +
+                            "<label class=\"control-label col-md-3\">Timepoint " + i + ":</label>" +
+                            "<div class=\"col-md-8\">" +
+                            "<input type=\"text\" class=\"form-control\" name=\"choice[]\" placeholder=\"Enter description\" required>" +
+                            "</div></div>";
+                }
                 function clear_form() {
                     $("#question").val("");
 
@@ -204,27 +236,6 @@ and open the template in the editor.
                         /*here we remove all the input text fields, not text area*/
                         $(this).remove();
                     });
-                }
-                function append_question() {
-                    var question = $("#question").val();
-                    alert(question);
-                    var field_wrapper = $("<div name=\"question[]\" id=\"question" + question_count + "\"/>");
-                    var question_label = $("<label name=\"question_text\ value=\"" + question + "\">" + question + "</label>");
-                    question_count++;
-                    $(field_wrapper).append(question_label);
-
-                    $('input[name^="choice"]').each(function () {
-
-                        var choice_label = "";
-                        alert($(this).val());
-                        choice_count++;
-                    });
-
-
-
-
-                    $("#saved_questions").append(field_wrapper);
-                    clear_form();
                 }
 
                 $("#ddrp1").change(function () {
@@ -244,8 +255,8 @@ and open the template in the editor.
                     }
                     hide_form();
                     $("#form_create_form").show();
-                       $("#question_creator").show();
-                  
+                    $("#question_creator").show();
+
                     $("#save").show();
                     $("#submit_button").show(); //needs a counter of some sort to only show submit button if at least 1 question has been made
 
@@ -254,14 +265,28 @@ and open the template in the editor.
                     $("#start_create_survey").hide();
                     $("#directions").hide();
                     $("#question_creator").show();
-                    
+
                     $("#survey_title_header").text($("#survey_title").val());
-                    
-                    
-                    
-                    
+
+
+                    var timepoint_count = $("#timepoint_value").val();
+                    /*Loading nmodal*/
+                    for (i = 0; i < timepoint_count; i++) {
+                        var count = i + 1;
+                        $("#timepoint_descriptions_content").append(get_description_input_field(count));
+
+                    }
+
+                    $('#myModal').modal({
+                        backdrop: 'static',
+                        keyboard: false
+                    });
+                    $('#myModal').modal('show');
+                    $("#time_points_modal").show();
+
                 });
-                
+
+
                 $("#add_choice").click(function () {
                     $("#create_question").append(get_text_input_field());
                 });
@@ -271,22 +296,20 @@ and open the template in the editor.
                 $("#remove_button").click(function () {
                     alert("clicked");
                 });
-                $("#save_question").click(function () {
-                    append_question();
-                });
-                
-                $("#questions").change(function(){
+
+
+                $("#questions").change(function () {
                     $("#question").val($("#questions option:selected").text());
                     hide_form();
-                     $("#form_create_form").show();
-                     $("#question_creator").show();
+                    $("#form_create_form").show();
+                    $("#question_creator").show();
                     $("#save").show();
                     $("#submit_button").show(); //needs a counter of some sort to only show submit button if at least 1 question has been made
 
                 });
                 hide_form();
-                
-                
+                $("#time_points_modal").hide();
+
             });
         </script>
     </body>

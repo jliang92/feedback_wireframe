@@ -19,9 +19,7 @@ and open the template in the editor.
         include 'web_components/bootstrap_navbar.html';
         ?>
         <div class="container">
-            <!--  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Click to Proceed</button>-->
-
-            <!-- Modal -->
+           <!-- Modal -->
             <div class="modal fade" id="myModal" role="dialog">
                 <div class="modal-dialog">
                     <div class="modal-content">
@@ -62,7 +60,6 @@ and open the template in the editor.
 
 
 
-                                <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
                             </div>
                         </form>
                     </div>
