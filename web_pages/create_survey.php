@@ -30,7 +30,7 @@ and open the template in the editor.
                             <input type="text" id="survey_title" class="form-control" placeholder="Enter title" required>
                         </div>
                         <div class="col-md-3">
-                            <input type="number"  class="form-control" placeholder="Enter number of timepoints" required>
+                            <input type="number" min="1" class="form-control" placeholder="Enter number of timepoints" required>
                         </div>
                         <div class="col-md-2">
                             <button id="start_create_survey" class="btn btn-block btn-primary" data-placement="bottom" title="Click to start making the survey">Create Survey</button>

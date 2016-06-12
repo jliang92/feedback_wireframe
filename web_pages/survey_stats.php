@@ -62,7 +62,7 @@ and open the template in the editor.
                 <div class="panel-body">
                     <div>
                         <div id="container_2" style="height: 300px; width: 100%;"></div>
-                        Whats up
+                        
 
                     </div>
 
@@ -72,7 +72,7 @@ and open the template in the editor.
                 <div class="panel-body">
                     <div >
                         <div id="container_4" style="height: 300px; width: 100%;"></div>
-                        Whats up
+                        
 
                     </div>
 
@@ -82,8 +82,7 @@ and open the template in the editor.
                 <div class="panel-body">
                     <div >
                         <div id="container_5" style="height: 300px; width: 100%;"></div>
-                        Whats up
-
+                        
                     </div>
 
                 </div>
@@ -92,12 +91,14 @@ and open the template in the editor.
                 <div class="panel-body">
                     <div >
                         <div id="container_6" style="height: 300px; width: 100%;"></div>
-                        Whats up
+                       
 
                     </div>
 
                 </div>
             </div>
+            
+            <a href="responses_received_list.php"><button id="back" type="button" class="btn btn-block btn-primary">Back</button></a>
         </div>
         <script type="text/javascript">
             $(document).ready(function () {

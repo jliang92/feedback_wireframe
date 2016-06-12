@@ -24,7 +24,7 @@ and open the template in the editor.
                 
             </div>
 
-            <form class="form-horizontal" role="form">
+            <form class="form-horizontal" action="home.php" role="form">
 
                 <div class="panel panel-body panel-default">
 
@@ -181,14 +181,21 @@ and open the template in the editor.
 
                 <div class=" text-center">
                     <div class="col-md-3"></div>
-                    <div class="col-md-3"><button type="button" class=" btn btn-block btn-primary">Submit</button></div>                    
+                    <div class="col-md-3"><button type="submit" class=" btn btn-block btn-primary">Submit</button></div>                    
                    
-                    <div class="col-md-3"><button type="button" class=" btn btn-block btn-primary">Submit as Anonymous</button></div>
+                    <div class="col-md-3"><button id="anonymous_submission" type="submit" class=" btn btn-block btn-primary">Submit as Anonymous</button></div>
                    
                 </div>
 
             </form>
         </div>
 
+        <script>
+        $(document).ready(function(){
+            $("#anonymous_submission").click(function(){
+                alert("You have selected to submit your survey anonymously.");
+            });
+        });
+        </script>
     </body>
 </html>
