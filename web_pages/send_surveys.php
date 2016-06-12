@@ -64,15 +64,18 @@ and open the template in the editor.
 
                             <div class="col-md-8">  
                                 <select class="form-control" >
-                                    <option>Survey about Jefferson Jackson</option>
-                                    <option>Survey about Martin Stein</option>
-                                    <option>Survey about Ronnie Raymond</option>
-                                
+                                    <option>Survey about Sam Sung</option>
+                                  
                                 </select>
                             </div>
 
                             <div class="col-md-4">
-                                <input  class="form-control" type="number" placeholder="Enter the number of timepoints" required>
+                                <select class="form-control">
+                                    <option> First Quarter 2016</option>
+                                    <option> Second Quarter 2016</option>
+                                    <option> Third Quarter 2016</option>
+                                    <option> Fourth Quarter 2016</option>
+                                </select>
                             </div>
                         </div>
                     </div>

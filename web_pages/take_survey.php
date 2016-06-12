@@ -175,9 +175,12 @@ and open the template in the editor.
                         </div>
                     </div>
                 </div>
-                <div><button type="button" class="btn btn-block btn-primary">Anonymous Save and Submit</button></div>
-                <br><br>
-                <div><button type="button" class="btn btn-block btn-primary">Save and Submit</button></div>
+
+                <div class="row center-align">
+                    <div class="col-md-6"><button type="button" class=" btn  btn-primary">Submit</button></div>                    
+                    <div class="col-md-6"><button type="button" class=" btn btn-primary">Submit as Anonymous</button></div>
+                </div>
+                
             </form>
         </div>
 

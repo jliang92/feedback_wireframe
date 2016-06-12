@@ -19,7 +19,9 @@ and open the template in the editor.
         include '../web_components/bootstrap_navbar_logged_in.html';
         ?>
         <div class="container">
-This page is only to show you the questions and choices.
+            <div class="panel panel-heading panel-default">
+                <h2 class="text-center"> Survey Title: Survey about Jimmy Cricket</h2>
+            </div>
 
             <form class="form-horizontal" role="form">
 

@@ -28,7 +28,16 @@ and open the template in the editor.
                         <label class="control-label" for="timepoints">Survey Title:</label>
                     </div>
                     <div class="col-md-4">  
-                        <label class="control-label" for="timepoints">Survey about George Lazenby</label>
+                        <label class="control-label" for="timepoints">Survey about Sam Sung</label>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2"> 
+                        <label class="control-label" for="timepoints">Number of participants for timepoint:</label>
+                    </div>
+                    <div class="col-md-4">  
+                        <label class="control-label" for="timepoints">258</label>
 
                     </div>
                 </div>
@@ -36,7 +45,7 @@ and open the template in the editor.
                     <div class="col-md-2"> 
                         <label class="control-label" for="timepoints">Select a timepoint:</label>
                     </div>
-                    <div class="col-md-4">  
+                    <div class="col-md-2">  
                         <select id="timepoints" class="form-control">
                             <option value=1>1</option>
                             <option value=2>2</option>
@@ -52,7 +61,7 @@ and open the template in the editor.
             <div class="panel panel-default">
                 <div class="panel-body">
                     <div id="timepoint_content">
-                        <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+                        <div id="c_container" style="height: 300px; width: 100%;"></div>
                     </div>
                 </div>
             </div>
@@ -63,27 +72,27 @@ and open the template in the editor.
                 //Better to construct options first and then pass it as a parameter
                 var options = {
                     title: {
-                        text: "Column Chart using jQuery Plugin"
+                        text: "Scores"
                     },
                     animationEnabled: true,
                     data: [
                         {
                             type: "column", //change it to line, area, bar, pie, etc
                             dataPoints: [
-                                {x: 10, y: 10},
-                                {x: 20, y: 11},
-                                {x: 30, y: 14},
-                                {x: 40, y: 16},
-                                {x: 50, y: 19},
-                                {x: 60, y: 15},
-                                {x: 70, y: 12},
-                                {x: 80, y: 10}
+                                {x: 1, y: 10},
+                                {x: 2, y: 11},
+                                {x: 3, y: 14},
+                                {x: 4, y: 16},
+                                {x: 5, y: 19},
+                                {x: 6, y: 15},
+                                {x: 7, y: 12},
+                                {x: 8, y: 10}
                             ]
                         }
                     ]
                 };
 
-                $("#chartContainer").CanvasJSChart(options);
+                $("#c_container").CanvasJSChart(options);
                 $("#timepoints").change(function () {
                     //   var selectedVal = $(this).find(':selected').val();
                     var vals = [];
@@ -101,26 +110,52 @@ and open the template in the editor.
 
                     var options = {
                         title: {
-                            text: "Score"
+                            text: "Scores"
                         },
                         animationEnabled: true,
                         data: [
                             {
                                 type: "column", //change it to line, area, bar, pie, etc
                                 dataPoints: [
-                                    {x: "1a", y: vals[0]},
-                                    {x: "4b", y: vals[1]},
-                                    {x: 6, y: vals[2]},
-                                    {x: 8, y: vals[3]},
-                                    {x: 10, y: vals[4]},
-                                    {x: 12, y: vals[5]},
-                                    {x: 14, y: vals[6]},
-                                    {x: 16, y: vals[7]}
+                                    {label: "Saudi", y: vals[0]},
+                                    {label: "Santa Teresa", y: vals[1]},
+                                    {label: "thor",y: vals[2]},
+                                    {label: "a", y: vals[3]},
+                                    {label: "b", y: vals[4]},
+                                    {label: "c", y: vals[5]},
+                                    {label: "d", y: vals[7]},
+                                    {label: "e", y: vals[6]}
+                                ]
+                            },
+                            {
+                                type: "column", //change it to line, area, bar, pie, etc
+                                dataPoints: [
+                                    {label: "Saudi", y: vals[1]},
+                                    {label: "Santa Teresa", y: vals[3]},
+                                    {label: "thor",y: vals[4]},
+                                    {label: "a", y: vals[2]},
+                                    {label: "b", y: vals[5]},
+                                    {label: "c", y: vals[7]},
+                                    {label: "d", y: vals[6]},
+                                    {label: "e", y: vals[0]}
+                                ]
+                            },
+                            {
+                                type: "column", //change it to line, area, bar, pie, etc
+                                dataPoints: [
+                                    {label: "Saudi", y: vals[3]},
+                                    {label: "Santa Teresa", y: vals[6]},
+                                    {label: "thor",y: vals[7]},
+                                    {label: "a", y: vals[5]},
+                                    {label: "b", y: vals[4]},
+                                    {label: "c", y: vals[2]},
+                                    {label: "d", y: vals[0]},
+                                    {label: "e", y: vals[1]}
                                 ]
                             }
                         ]
                     };
-                    $("#chartContainer").CanvasJSChart(options);
+                    $("#c_container").CanvasJSChart(options);
 
                 });
             });

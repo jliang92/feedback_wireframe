@@ -19,25 +19,39 @@ and open the template in the editor.
         include '../web_components/bootstrap_navbar_logged_in.html';
         ?>
         <div class="container">
+            <h2 class="text-center">My Surveys</h2>
+            
+            
+            
             <div class="panel panel-default">
-                <div class="panel-heading panel-info">My Surveys</div>
-                <div class="panel-body">This is the panel to view all the surveys that you created/manage.
-                    Only the title will be shown, clicking the title shows the whole survey with questions and choices
+                <div class="panel-heading panel-info">Completed Surveys</div>
+                <div class="panel-body">
                     <ul>
-                        <li><a href="entire_survey.php">Survey about Jimmy Cricket</a></li>
+
+                        <li><a href="completed_survey.php">Survey about Jimmy Cricket</a></li>
                     </ul>
                 </div>
             </div>
             <div class="panel panel-default">
-                <div class="panel-heading panel-info">Submitted Responses</div>
-                <div class="panel-body">Panel Content</div>This is to review the submitted responses.
-                <ul>
-                    <li><a href="survey_stats.php">Survey about Sam Sung</a></li>
-                    <li><a href="survey_stats.php">Survey about Mike Roe Soft</a></li>
-                    <li><a href="survey_stats.php">Survey about Noah Kia</a></li>
+                <div class="panel-heading panel-info">Your new surveys:</div>
+                <div class="panel-body">
+                    <ul>
+                        <li><a href="take_survey.php">Survey about Daniel Craig</a></li>
+                        
 
-                </ul>
+                    </ul>
+                </div>
             </div>
+            <div class="panel panel-default">
+                <div class="panel-heading panel-info">Responses Received</div>
+                <div class="panel-body">
+                    <ul>
+                        <li><a href="responses_received_list.php">Survey about Sam Sung</a></li>
+
+
+                    </ul></div>
+            </div>
+            
         </div>
 
     </body>
