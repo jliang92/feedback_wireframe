@@ -19,14 +19,14 @@ and open the template in the editor.
         include 'web_components/bootstrap_navbar.html';
         ?>
         <div class="container">
-            <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Click to Proceed</button>
+          <!--  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Click to Proceed</button>-->
 
             <!-- Modal -->
             <div class="modal fade" id="myModal" role="dialog">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                           <!-- <button type="button" class="close" data-dismiss="modal">&times;</button>-->
                             <h4 class="modal-title">Log In</h4>
                         </div><form class="form-horizontal" action="web_pages/home.php" role="form">
                             <div class="modal-body">
@@ -45,7 +45,7 @@ and open the template in the editor.
                             </div>
                             <div class="modal-footer">
                                 <button type="submit" class="btn btn-default">Log In</button>
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                <!-- <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
                             </div>
                         </form>
                     </div>
@@ -57,7 +57,11 @@ and open the template in the editor.
         <script>
             $(document).ready(function () {
                 // will show the create product form
-
+                $('#myModal').modal({
+                    backdrop: 'static',
+                    keyboard: false
+                });
+                $('#myModal').modal('show');
                 $('#log_out').hide();
 
             });
